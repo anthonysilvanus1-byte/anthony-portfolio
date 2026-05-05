@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting… — Adeyemi Anthony</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      // GitHub Pages SPA fallback — redirect any unknown path back to root
+      // and forward the original path / hash so anchor links keep working.
+      (function () {
+        var l = window.location;
+        var pathSegments = l.pathname.split("/").filter(Boolean);
+        // If served from a project page like https://user.github.io/repo/, keep the first segment.
+        var basePath = pathSegments.length > 0 ? "/" + pathSegments[0] + "/" : "/";
+        l.replace(basePath + (l.hash || ""));
+      })();
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <p>This site requires JavaScript. Please return to the homepage.</p>
+    </noscript>
+  </body>
+</html>
