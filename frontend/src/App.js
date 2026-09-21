@@ -6,7 +6,7 @@ import { Toaster } from "./components/ui/sonner";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename={new URL(process.env.PUBLIC_URL || "/", window.location.origin).pathname}>
         <Routes>
           <Route path="/" element={<Portfolio />} />
         </Routes>
